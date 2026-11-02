@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <style>
-        /* 3. Text Styling: Belgenin tamamına Arial, sans-serif uygulama */
+        /* Belgenin tamamı ve siyah arka plan */
         body {
             font-family: Arial, sans-serif;
-            /* 1. Apply Colors: body arka plan rengi açık gri (HEX) */
-            background-color: #f4f4f4;
+            background-color: #000000;
+            color: #ffffff;
             margin: 0;
             padding: 0;
         }
 
-        /* 1. Apply Colors & 2. Background Properties: Header */
+        /* Header alanı */
         header {
-            /* CMYK doğrudan her tarayıcıda desteklenmediği için standart rgb fallback ile cmyk() tanımı */
             background-color: rgb(210, 35, 42);
             background-color: cmyk(0%, 83%, 80%, 18%);
             background-image: url("https://edube.org/uploads/media/default/0001/04/portfolio.jpg");
@@ -27,62 +26,79 @@
             text-align: center;
         }
 
-        /* 1. Apply Colors: h1 için yeşil tonu (RGB) */
+        /* Başlıklar */
         h1 {
             color: rgb(34, 139, 34);
         }
 
-        /* 1. Apply Colors & 3. Text Styling: h2 kuralları */
         h2 {
-            /* Mavi tonu (HSL) */
-            color: hsl(210, 100%, 40%);
-            /* İtalik ve altı çizili */
+            color: hsl(210, 100%, 70%);
             font-style: italic;
             text-decoration: underline;
         }
 
-        /* 3. Text Styling: p elementlerinin yazı boyutu */
         p {
             font-size: 18px;
         }
 
-        /* 2. Background Properties: main için açık maviden beyaza doğrusal degrade */
+        /* Main alanı koyu ton degrade */
         main {
-            background: linear-gradient(to bottom, #dbeafe, #ffffff);
+            background: linear-gradient(to bottom, #111111, #000000);
             padding: 20px;
         }
 
-        /* 4. List Properties: Sırasız listeler */
+        /* Proje listesi ve görsel hizalama */
         ul {
             list-style-type: square;
+            padding-left: 20px;
         }
 
         ul li {
             line-height: 1.6;
             padding-left: 10px;
+            margin-bottom: 25px;
         }
 
-        /* 5. Hyperlink Properties: Bağlantılar */
-        a {
-            color: darkblue;
+        /* Proje öğeleri için esnek düzen */
+        .project-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-        a:visited {
-            color: purple;
+        .project-text {
+            font-size: 18px;
+            font-weight: bold;
+            min-width: 220px;
         }
 
-        a:hover {
-            color: red;
-        }
-
-        /* 6. Image Properties: Görseller */
+        /* Görseller için ödev kuralları */
         img {
             width: 100%;
             max-width: 600px;
             border-radius: 10px;
             box-shadow: 5px 5px 10px gray;
             display: block;
-            margin: 15px 0;
+        }
+
+        /* Bağlantılar */
+        a {
+            color: #64b5f6;
+        }
+
+        a:visited {
+            color: #ba68c8;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #888888;
         }
     </style>
 </head>
@@ -101,9 +117,24 @@
             <h2>Projects</h2>
             <p>Here are some of my recent projects:</p>
             <ul>
-                <li>Project One</li>
-                <li>Project Two</li>
-                <li>Project Three</li>
+                <li>
+                    <div class="project-item">
+                        <span class="project-text">Blog Page</span>
+                        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=600&q=80" alt="Blog Page Preview">
+                    </div>
+                </li>
+                <li>
+                    <div class="project-item">
+                        <span class="project-text">Blockchain Web Page</span>
+                        <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=600&q=80" alt="Blockchain Web Page Preview">
+                    </div>
+                </li>
+                <li>
+                    <div class="project-item">
+                        <span class="project-text">School Web Page</span>
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=80" alt="School Web Page Preview">
+                    </div>
+                </li>
             </ul>
         </section>
 
@@ -111,8 +142,6 @@
             <h2>Contact Me</h2>
             <p>Feel free to reach out to me via email or through my social media profiles.</p>
             <p><a href="mailto:info@myportfolio.com">Email Me</a></p>
-            <!-- 6. adımdaki görsel stil kurallarını test etmek için eklenen görsel -->
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Workspace">
         </section>
     </main>
 
