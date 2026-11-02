@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* 3. Text Styling: Belgenin tamamına Arial, sans-serif uygulama */
+        body {
+            font-family: Arial, sans-serif;
+            /* 1. Apply Colors: body arka plan rengi açık gri (HEX) */
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 1. Apply Colors & 2. Background Properties: Header */
+        header {
+            /* CMYK doğrudan her tarayıcıda desteklenmediği için standart rgb fallback ile cmyk() tanımı */
+            background-color: rgb(210, 35, 42);
+            background-color: cmyk(0%, 83%, 80%, 18%);
+            background-image: url("https://edube.org/uploads/media/default/0001/04/portfolio.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* 1. Apply Colors: h1 için yeşil tonu (RGB) */
+        h1 {
+            color: rgb(34, 139, 34);
+        }
+
+        /* 1. Apply Colors & 3. Text Styling: h2 kuralları */
+        h2 {
+            /* Mavi tonu (HSL) */
+            color: hsl(210, 100%, 40%);
+            /* İtalik ve altı çizili */
+            font-style: italic;
+            text-decoration: underline;
+        }
+
+        /* 3. Text Styling: p elementlerinin yazı boyutu */
+        p {
+            font-size: 18px;
+        }
+
+        /* 2. Background Properties: main için açık maviden beyaza doğrusal degrade */
+        main {
+            background: linear-gradient(to bottom, #dbeafe, #ffffff);
+            padding: 20px;
+        }
+
+        /* 4. List Properties: Sırasız listeler */
+        ul {
+            list-style-type: square;
+        }
+
+        ul li {
+            line-height: 1.6;
+            padding-left: 10px;
+        }
+
+        /* 5. Hyperlink Properties: Bağlantılar */
+        a {
+            color: darkblue;
+        }
+
+        a:visited {
+            color: purple;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        /* 6. Image Properties: Görseller */
+        img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px gray;
+            display: block;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>Welcome to My Portfolio</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>Hi, I'm a web developer with a passion for creating beautiful and functional web pages.</p>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <p>Here are some of my recent projects:</p>
+            <ul>
+                <li>Project One</li>
+                <li>Project Two</li>
+                <li>Project Three</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me via email or through my social media profiles.</p>
+            <p><a href="mailto:info@myportfolio.com">Email Me</a></p>
+            <!-- 6. adımdaki görsel stil kurallarını test etmek için eklenen görsel -->
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Workspace">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Portfolio</p>
+    </footer>
+</body>
+</html>
